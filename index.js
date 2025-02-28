@@ -68,4 +68,10 @@ function checkWinner() {
     changePlayer();
   }
 }
-function restartGame() {}
+function restartGame() {
+  currentPlayer = "X";
+  options = ["", "", "", "", "", "", "", "", ""];
+  status.textContent = `${currentPlayer}'s turn`;
+  cells.forEach((cell) => (cell.textContent = ""));
+  running = true;
+}
